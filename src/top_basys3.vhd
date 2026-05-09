@@ -193,15 +193,11 @@ begin
     led(3 downto 0) <= w_cycle;
     led(15 downto 12) <= w_flags;
     
-    -- Final segment output mux
-    -- Active-low seven-segment:
-    -- "0111111" = minus sign
-    -- "1111111" = blank
-    seg <= "1111111" when w_cycle(0) = '1' else
-           "0111111" when w_sel = "0111" and w_sign_mux = '1' else
+    -- Mux to help deal with minus sign
+    seg <= "0111111" when w_sel = "0111" and w_sign_mux = '1' else
            "1111111" when w_sel = "0111" and w_sign_mux = '0' else
            w_seg;
-    -- Placeholder for sign data for TDM4
+    -- Placeholder for sign data for TDM4 since actual minus goes through mux
     w_sign <= "0000";
 
     
