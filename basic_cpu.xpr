@@ -125,9 +125,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/src/ALU.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/src/ALU.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/ALU.vhd"/>
+          <Attr Name="ImportTime" Val="1778285525"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
