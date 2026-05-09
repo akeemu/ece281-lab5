@@ -206,7 +206,7 @@ begin
           w_sel;
     
     
-	-- Following from the 
+	-- Following from the VHDL reference sheet for register
 	register_proc : process (clk)
 	begin
 	   if rising_edge(clk) then
